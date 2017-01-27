@@ -2,14 +2,13 @@
 
 namespace CodeDelivery\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use CodeDelivery\Repositories\UserRepository;
 use CodeDelivery\Models\User;
-use CodeDelivery\Validators\UserValidator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class UserRepositoryEloquent
+ *
  * @package namespace CodeDelivery\Repositories;
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
@@ -24,7 +23,6 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
         return User::class;
     }
 
-    
 
     /**
      * Boot up the repository, pushing criteria

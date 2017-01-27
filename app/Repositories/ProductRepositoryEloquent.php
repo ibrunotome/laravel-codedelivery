@@ -2,14 +2,13 @@
 
 namespace CodeDelivery\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use CodeDelivery\Repositories\ProductRepository;
 use CodeDelivery\Models\Product;
-use CodeDelivery\Validators\ProductValidator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class ProductRepositoryEloquent
+ *
  * @package namespace CodeDelivery\Repositories;
  */
 class ProductRepositoryEloquent extends BaseRepository implements ProductRepository
@@ -24,7 +23,6 @@ class ProductRepositoryEloquent extends BaseRepository implements ProductReposit
         return Product::class;
     }
 
-    
 
     /**
      * Boot up the repository, pushing criteria

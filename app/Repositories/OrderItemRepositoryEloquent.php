@@ -2,14 +2,13 @@
 
 namespace CodeDelivery\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use CodeDelivery\Repositories\OrderItemRepository;
 use CodeDelivery\Models\OrderItem;
-use CodeDelivery\Validators\OrderItemValidator;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class OrderItemRepositoryEloquent
+ *
  * @package namespace CodeDelivery\Repositories;
  */
 class OrderItemRepositoryEloquent extends BaseRepository implements OrderItemRepository
@@ -24,7 +23,6 @@ class OrderItemRepositoryEloquent extends BaseRepository implements OrderItemRep
         return OrderItem::class;
     }
 
-    
 
     /**
      * Boot up the repository, pushing criteria
