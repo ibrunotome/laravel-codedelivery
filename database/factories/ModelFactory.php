@@ -23,9 +23,16 @@ $factory->define(CodeDelivery\Models\User::class, function (Faker\Generator $fak
     ];
 });
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(CodeDelivery\Models\Category::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name
+        'name' => $faker->word
+    ];
+});
+
+$factory->define(CodeDelivery\Models\Product::class, function (Faker\Generator $faker) {
+    return [
+        'name'        => $faker->word,
+        'description' => $faker->sentence,
+        'price'       => $faker->numberBetween(10, 50)
     ];
 });
