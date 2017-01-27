@@ -2,11 +2,18 @@
 
 namespace CodeDelivery\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class User extends Authenticatable
+class User extends Model implements Transformable
 {
+    use TransformableTrait, Authenticatable, Authorizable, CanResetPassword;
+
     use Notifiable;
 
     /**
@@ -34,4 +41,5 @@ class User extends Authenticatable
     {
         return $this->hasOne(Client::class);
     }
+
 }
